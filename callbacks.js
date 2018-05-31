@@ -10,9 +10,9 @@ function resizeImages(source, dest, width, height, callback) {
                         dest + "w" + width + "_" + filename,
                         (err, values) => {
                             if (err) {
-                                callback(err);
+                                reject(error);
                             } else if (fileIndex == files.length - 1) {
-                                callback();
+                                resolve(result);
                             }
                         }
                     );
